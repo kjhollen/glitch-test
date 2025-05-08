@@ -10,7 +10,7 @@
 
 // TODO: UPDATE THIS TO MATCH YOUR REMIXED PROJECT URL!
 // otherwise, the network connection won't take!
-const SOCKET_URL = "https://cci-networked-drawing-app.glitch.me/"
+const SOCKET_URL = "https://github.com/kjhollen/glitch-test.git";
 let socket;
 
 // set up the sketch canvas and socket connection,
