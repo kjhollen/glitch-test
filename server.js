@@ -10,7 +10,12 @@ const server = app.listen(port);
 app.use(express.static('public'));
 
 const socket = require('socket.io');
-const io = socket(server);
+const io = socket(server, {
+  cors: {
+      origin: "https://socket-drawing-test.onrender.com",
+      methods: ["GET", "POST"]
+  }
+});
 
 // this is a callback function for when the server is finished setting up.
 // you probably won't need to alter code anywhere else in this file.
