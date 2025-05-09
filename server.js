@@ -11,7 +11,7 @@ app.use(express.static('public'));
 
 const allowedOrigins = [
   "https://socket-drawing-test.onrender.com", // Add your deployed client URL
-  "https://github.com/socket.io/",
+  "https://github.com",
   "http://localhost:3000", // Add this for local development
 ];
 
