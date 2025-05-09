@@ -4,15 +4,21 @@
 
 const express = require('express');
 const app = express();
-const port = process.env.PORT | 3001;
+const port = process.env.PORT | 3000;
 const server = app.listen(port);
 
 app.use(express.static('public'));
 
+const allowedOrigins = [
+  "https://socket-drawing-test.onrender.com", // Add your deployed client URL
+  "https://github.com/socket.io/",
+  "http://localhost:3000", // Add this for local development
+];
+
 const socket = require('socket.io');
 const io = socket(server, {
   cors: {
-      origin: "https://socket-drawing-test.onrender.com",
+      origin: allowedOrigins,
       methods: ["GET", "POST"]
   }
 });
